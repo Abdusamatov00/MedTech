@@ -86,7 +86,7 @@ export const SignIn = () => {
               value={formData.email}
               onChange={handleChange}
               error={errors.email}
-              placeholder="user@gmail.com"
+              placeholder="example@gmail.com"
             />
 
             <Input

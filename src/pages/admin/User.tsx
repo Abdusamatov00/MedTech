@@ -183,16 +183,14 @@ const UserPage = () => {
         maxWidth="sm"
         fullScreen={fullScreen}
       >
-        <DialogTitle>
-          {editingUser ? "Edit User" : "Add New User"}
-        </DialogTitle>
+        <DialogTitle>{editingUser ? "Edit User" : "Add New User"}</DialogTitle>
         <form onSubmit={handleSubmit}>
           <DialogContent className="space-y-4">
             <TextField
               fullWidth
               label="Full Name"
               name="name"
-              sx={{marginY:1}}
+              sx={{ marginY: 1 }}
               value={formData.name}
               onChange={handleChange}
               error={!!errors.name}
@@ -203,7 +201,7 @@ const UserPage = () => {
               label="Email Address"
               type="email"
               name="email"
-                sx={{marginY:1}}
+              sx={{ marginY: 1 }}
               value={formData.email}
               onChange={handleChange}
               error={!!errors.email}
@@ -213,7 +211,7 @@ const UserPage = () => {
               fullWidth
               label="Password"
               type="password"
-                sx={{marginY:1}}
+              sx={{ marginY: 1 }}
               name="password"
               value={formData.password}
               onChange={handleChange}
@@ -223,7 +221,7 @@ const UserPage = () => {
             <TextField
               select
               fullWidth
-                sx={{marginY:1}}
+              sx={{ marginY: 1 }}
               label="Role"
               name="role"
               value={formData.role}

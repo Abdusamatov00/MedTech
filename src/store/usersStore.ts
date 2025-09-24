@@ -1,9 +1,9 @@
-import { create } from 'zustand';
-import type{ UsersStore, User } from '../types';
-import { generateId } from '../utils/helpers';
+import { create } from "zustand";
+import type { UsersStore, User } from "../types";
+import { generateId } from "../utils/helpers";
 
 export const useUsersStore = create<UsersStore>((set, get) => ({
-  users: JSON.parse(localStorage.getItem('medtech-users') || '[]'),
+  users: JSON.parse(localStorage.getItem("medtech-users") || "[]"),
 
   addUser: (userData) => {
     const newUser: User = {
@@ -13,25 +13,25 @@ export const useUsersStore = create<UsersStore>((set, get) => ({
     };
 
     const updatedUsers = [...get().users, newUser];
-    localStorage.setItem('medtech-users', JSON.stringify(updatedUsers));
+    localStorage.setItem("medtech-users", JSON.stringify(updatedUsers));
     set({ users: updatedUsers });
   },
 
   updateUser: (id, userData) => {
-    const updatedUsers = get().users.map(user => 
+    const updatedUsers = get().users.map((user) =>
       user.id === id ? { ...user, ...userData } : user
     );
-    localStorage.setItem('medtech-users', JSON.stringify(updatedUsers));
+    localStorage.setItem("medtech-users", JSON.stringify(updatedUsers));
     set({ users: updatedUsers });
   },
 
   deleteUser: (id) => {
-    const updatedUsers = get().users.filter(user => user.id !== id);
-    localStorage.setItem('medtech-users', JSON.stringify(updatedUsers));
+    const updatedUsers = get().users.filter((user) => user.id !== id);
+    localStorage.setItem("medtech-users", JSON.stringify(updatedUsers));
     set({ users: updatedUsers });
   },
 
   getUsersByRole: (role) => {
-    return get().users.filter(user => user.role === role);
+    return get().users.filter((user) => user.role === role);
   },
 }));
