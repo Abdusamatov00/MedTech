@@ -70,15 +70,14 @@ export const Sidebar: React.FC = () => {
         fixed md:relative z-40
         ${collapsed ? "w-20" : "w-64"} 
         bg-gradient-to-b from-blue-50 to-blue-100
-        dark:from-gray-900 dark:to-gray-800
-        shadow-xl border-r border-gray-200 dark:border-gray-700 
-        min-h-screen transition-all duration-300 flex flex-col
+        dark:from-gray-500 dark:to-gray-700
+        shadow-xl border-r min-h-screen transition-all duration-300 flex flex-col
       `}
     >
       {/* Header */}
       <div className="mt-14 flex justify-between items-center px-4">
         {!collapsed && (
-          <span className="font-bold text-lg text-gray-800 dark:text-gray-200">
+          <span className="font-bold text-lg text-gray-800 dark:text-white">
             Dashboard
           </span>
         )}
