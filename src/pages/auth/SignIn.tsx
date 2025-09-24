@@ -60,13 +60,13 @@ export const SignIn = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-400 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
             Sign in to MedTech
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
+          <p className="mt-2 text-center text-sm text-white">
             Healthcare Management System
           </p>
         </div>
@@ -80,6 +80,7 @@ export const SignIn = () => {
             )}
 
             <Input
+              className="text-white"
               label="Email Address"
               type="email"
               name="email"
@@ -96,6 +97,7 @@ export const SignIn = () => {
               value={formData.password}
               onChange={handleChange}
               error={errors.password}
+              className="text-white"
               placeholder="********"
             />
 

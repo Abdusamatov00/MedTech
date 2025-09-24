@@ -5,7 +5,7 @@ import SliderChart from "../../components/ui/charts/slider-chart";
 export const AdminPanel = () => {
   return (
     <div className="p-6">
-      <div className="bg-white rounded-sm shadow my-3 p-4">
+      <div className="bg-gray-100 rounded-sm shadow my-3 p-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <MedTechDashboard />
           <UsersLinerChart />
